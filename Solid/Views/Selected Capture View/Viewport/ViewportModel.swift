@@ -44,7 +44,6 @@ class ViewportModel: NSObject, ObservableObject, SCNSceneRendererDelegate {
         super.init()
         
         //CAMERA SETUP
-        
         camera.zNear = Defaults.zMin
         camera.wantsDepthOfField = UserDefaults.standard.bool(forKey: "wantsDOF")
         camera.fStop = 1

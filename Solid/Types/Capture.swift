@@ -82,7 +82,7 @@ extension CaptureState: CustomStringConvertible {
     }
 
     static func == (lhs: Capture, rhs: Capture) -> Bool {
-        return lhs.id == rhs.id
+        return lhs._id == rhs._id
     }
     
     override class func primaryKey() -> String? {

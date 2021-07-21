@@ -93,7 +93,7 @@ class Storage {
     }
     
     static func url(for capture: Capture, with quality: PhotogrammetrySession.Request.Detail, includeUsdzExtension: Bool = true) -> URL {
-        let id = "\(capture.id)_\(quality.name)"
+        let id = "\(capture._id)_\(quality.name)"
         if includeUsdzExtension {
             return getDocumentsDirectory().appendingPathComponent("\(id).usdz")
         } else {
@@ -111,8 +111,8 @@ class Storage {
         var exportItems: [ExportItem] = []
         
         for quality in PhotogrammetrySession.Request.Detail.allCases {
-            let id = "\(capture.id)_\(quality.name)"
-            
+            let id = "\(capture._id)_\(quality.name)"
+            debugPrint("ID \(capture._id)")
             //USDZ
             let fileUrl = getDocumentsDirectory().appendingPathComponent("\(id).usdz")
             if FileManager.default.fileExists(atPath: fileUrl.path) {
