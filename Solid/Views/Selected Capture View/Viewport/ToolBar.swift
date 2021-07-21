@@ -104,7 +104,7 @@ struct ToolBar: View {
             }
             
             //Quality Picker
-            if capture.processedFiles.count > 1 {
+            //if capture.processedFiles.count > 1 {
                 Picker(selection: $selectedPreviewQuality, label: EmptyView()) {
                     ForEach(capture.processedFiles) { file in
                         Text(file.quality.name).tag(file.quality)
@@ -112,7 +112,7 @@ struct ToolBar: View {
                 }
                 .pickerStyle(.segmented)
                 .scaledToFit()
-            }
+            //}
         }
     }
 }

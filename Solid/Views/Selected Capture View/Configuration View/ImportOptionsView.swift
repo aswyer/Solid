@@ -56,7 +56,7 @@ struct ImportOptionsView: View {
                             importConfiguration.qualitySelections[index].quality.name,
                             isOn: $importConfiguration.qualitySelections[index].selected
                         )
-                            .disabled(index == 0)
+                            //.disabled(index == 0)
                     }
                 }
                 
