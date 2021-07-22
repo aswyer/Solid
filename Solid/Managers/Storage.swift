@@ -112,7 +112,7 @@ class Storage {
         
         for quality in PhotogrammetrySession.Request.Detail.allCases {
             let id = "\(capture._id)_\(quality.name)"
-            debugPrint("ID \(capture._id)")
+            
             //USDZ
             let fileUrl = getDocumentsDirectory().appendingPathComponent("\(id).usdz")
             if FileManager.default.fileExists(atPath: fileUrl.path) {

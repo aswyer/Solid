@@ -38,13 +38,10 @@ struct ViewportView: View { //Equatable
                 Spacer()
                 
                 //Preview Quality Picker
-                HStack {
-                    ToolBar(model: model, capture: capture, selectedPreviewQuality: $selectedPreviewQuality)
-                        .padding(8)
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
-                        .padding(16)
-                    Spacer()
-                }
+                ToolBar(model: model, capture: capture, selectedPreviewQuality: $selectedPreviewQuality)
+                    .padding(8)
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
+                    .padding(16)
             }
             
         }
