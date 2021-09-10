@@ -35,6 +35,7 @@ struct SceneViewRepresentable: NSViewRepresentable {
     }
     
     func updatedSceneView() -> SCNView {
+
         
         //update capture
         viewportModel.update(withNewCapture: capture, quality: selectedPreviewQuality)

@@ -33,6 +33,7 @@ struct MainView: View {
             
         //Toolbar
         .toolbar {
+            
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button(action: {
                     //from https://developer.apple.com/forums/thread/651807?answerId=617555022#617555022
@@ -54,6 +55,7 @@ struct MainView: View {
                 }
             
             }
+            
             
             ToolbarItem(placement: ToolbarItemPlacement.destructiveAction) {
                 Button(action: {

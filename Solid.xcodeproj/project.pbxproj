@@ -525,6 +525,7 @@
 				INFOPLIST_KEY_CFBundleExecutable = Solid;
 				INFOPLIST_KEY_CFBundleName = Solid;
 				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,6 +561,7 @@
 				INFOPLIST_KEY_CFBundleExecutable = Solid;
 				INFOPLIST_KEY_CFBundleName = Solid;
 				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
