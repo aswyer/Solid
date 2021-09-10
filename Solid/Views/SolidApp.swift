@@ -35,10 +35,10 @@ struct SolidApp: SwiftUI.App {
             
             
             CommandGroup(replacing: .appInfo) {
-                if let contributeUrl = URL(string: "https://github.com/aswyer/Solid") {
-                    Link("Solid Open-Source Project", destination: contributeUrl)
-                }
-                
+//                if let contributeUrl = URL(string: "https://github.com/aswyer/Solid") {
+//                    Link("Solid Open-Source Project", destination: contributeUrl)
+//                }
+//                
                 Divider()
                 
                 if

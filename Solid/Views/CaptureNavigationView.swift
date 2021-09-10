@@ -32,6 +32,7 @@ struct CaptureNavigationView: View {
                     }
                 }
                 .listStyle(.sidebar)
+                .frame(minWidth: 100, idealWidth: 250)
                 
                 if let selectedCapture = selectedCapture {
                     SelectedCaptureView(model: model, capture: selectedCapture)

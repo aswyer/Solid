@@ -34,20 +34,32 @@ struct NoCaptureSelectedView: View {
                         Text("Capture Tips")
                     }
                     .popover(isPresented: $showingTips) {
-                        VStack(alignment: .leading, spacing: 4) {
-                            //Text("Here are some tips to remember:")
-                            //    .bold()
-                            Text("• Capture from all angles")
-                            Text("• Flip the object to capture all sides")
-                            Text("• Keep uniform lighting")
-                            Text("• 20-200 images will yield a good results")
-                        }
-                        .font(.body)
-                        .padding()
+                        TipsView(showsHeadline: false)
                     }
                 }
             }
         }
+        .padding()
+    }
+}
+
+struct TipsView: View {
+    
+    var showsHeadline: Bool
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            if showsHeadline {
+                Text("Some tips to remember:")
+                .bold()
+            }
+            
+            Text("• Capture object from all angles")
+            Text("• Flip the object to capture all sides")
+            Text("• Keep uniform lighting")
+            Text("• 20-200 images will yield good results")
+        }
+        .font(.body)
         .padding()
     }
 }

@@ -22,6 +22,8 @@ struct MainView: View {
     
     @State private var importFileBrowserDisplayed: Bool = false
     @State private var fileExportIsDisplayed: Bool = false
+    
+    @State private var showingTips = false
 
     @ObservedResults(Capture.self, sortDescriptor: SortDescriptor(keyPath: "dateCreated", ascending: false)) var captures
     
@@ -38,6 +40,19 @@ struct MainView: View {
                 }, label: {
                     Image(systemName: "sidebar.left")
                 })
+            }
+            
+            ToolbarItem(placement: ToolbarItemPlacement.automatic) {
+                Button {
+                    showingTips = true
+                } label: {
+                    Image(systemName: "info.circle")
+//                    Text("Capture Tips")
+                }
+                .popover(isPresented: $showingTips) {
+                    TipsView(showsHeadline: true)
+                }
+            
             }
             
             ToolbarItem(placement: ToolbarItemPlacement.destructiveAction) {
